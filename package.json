@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*",
+    "test": "mocha --compilers coffee:coffee-script/register ./test/**/*.js",
     "watch": "watchify -o ./js/index.js -t coffeeify ./js/**.coffee",
-    "run": "browser-sync start --server --files=\"*.html, js/index.js\""
+    "dev": "browser-sync start --server --files=\"*.html, js/index.js\"",
+    "doc": "codo js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "dependencies": {
     "browser-sync": "^2.18.2",
     "browserify": "^13.1.1",
+    "codo": "^2.1.2",
     "coffeeify": "^2.1.0",
     "mocha": "^3.2.0",
     "watchify": "^3.7.0"
