@@ -1,0 +1,28 @@
+{
+  "name": "explore-game",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*",
+    "watch": "watchify -o ./js/index.js -t coffeeify ./js/**.coffee",
+    "run": "browser-sync start --server --files=\"*.html, js/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jishaxe/explore-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jishaxe/explore-game/issues"
+  },
+  "homepage": "https://github.com/Jishaxe/explore-game#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.2",
+    "browserify": "^13.1.1",
+    "coffeeify": "^2.1.0",
+    "mocha": "^3.2.0",
+    "watchify": "^3.7.0"
+  }
+}

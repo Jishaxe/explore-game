@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module 'C:\\Users\\josh\\Documents\\gits\\explore-game\\js\\**.coffee' from 'C:\\Users\\josh\\Documents\\gits\\explore-game'");
