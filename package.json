@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register ./test/**/*.js",
-    "watch": "watchify -o ./js/index.js -t coffeeify ./js/**.coffee",
+    "test": "mocha --compilers coffee:coffee-script/register ./test/**/*.coffee",
+    "watch": "watchify -o ./js/index.js -t coffeeify ./js/index.coffee",
     "dev": "browser-sync start --server --files=\"*.html, js/index.js\"",
     "doc": "codo js"
   },
@@ -24,7 +24,10 @@
     "browserify": "^13.1.1",
     "codo": "^2.1.2",
     "coffeeify": "^2.1.0",
+    "config": "^1.24.0",
     "mocha": "^3.2.0",
+    "promise": "^7.1.1",
+    "request": "^2.79.0",
     "watchify": "^3.7.0"
   }
 }
