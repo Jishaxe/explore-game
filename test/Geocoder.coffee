@@ -8,8 +8,8 @@ describe "Geocoder", ->
       london = new Geocoder "London, UK"
       return london.search()
       .then (result) ->
-        assert.equal result.lat, "51.5073219"
-        assert.equal result.lon, "-0.1276473"
+        assert.equal result.coords.lat, "51.5073219"
+        assert.equal result.coords.lon, "-0.1276473"
     it "should return an exception when we search for something that doesn't exist", (done) ->
       nothing = new Geocoder "SDNFUIDNFnscsodinsdond"
       nothing.search()

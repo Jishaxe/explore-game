@@ -1,6 +1,7 @@
 config = require 'config'
 request = require 'request'
 Promise = require 'promise'
+Coordinates = require '../core/Coordinates'
 
 # Handles translating a human-readable place name into a set of coordinates.
 # Data retrieved from the pickpoint.io API - © OpenStreetMap contributors
@@ -36,7 +37,9 @@ class Geocoder
 
         if body.length is 0
           reject new Error "No results for search #{text}"
+          return
 
+        body[0].coords = new Coordinates body[0].lat, body[0].lon
         resolve body[0] # Return the first result
 
 module.exports = Geocoder
