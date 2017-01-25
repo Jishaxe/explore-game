@@ -1,6 +1,6 @@
 # Represents the Streets in view in this
 class World
-  constructor: ->
+  constructor: (@radius = 0.1) ->
     # A promise that will resolve to a list of streets in the area
     @streets = null
 
@@ -12,3 +12,4 @@ class World
 
   # Centers the view on the specified Street.
   # This will trigger a load of the data
+  center: (street) ->
