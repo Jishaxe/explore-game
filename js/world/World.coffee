@@ -13,3 +13,6 @@ class World
   # Centers the view on the specified Street.
   # This will trigger a load of the data
   center: (street) ->
+
+
+module.exports = World
